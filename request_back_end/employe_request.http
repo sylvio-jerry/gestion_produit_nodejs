@@ -1,0 +1,46 @@
+###
+GET http://localhost:3001/api/produit
+
+###
+GET http://localhost:3001/api/produit/newNumero
+
+
+###
+GET http://localhost:3001/api/produit/produit_information
+
+###
+GET http://localhost:3001/api/produit/totalMontant
+
+###
+GET http://localhost:3001/api/produit/minPrix
+
+###
+GET http://localhost:3001/api/produit/maxPrix
+
+
+###
+GET http://localhost:3001/api/produit/2
+
+
+###
+POST http://localhost:3001/api/produit
+Content-Type: application/json
+
+{
+    "design": "koba",
+    "quantite": 10,
+    "prix": 9000
+}
+
+###
+PUT http://localhost:3001/api/produit/1
+Content-Type: application/json
+
+{
+    "design": "koba",
+    "quantite": 50,
+    "prix": 3000
+}
+
+###
+DELETE http://localhost:3001/api/produit/5
