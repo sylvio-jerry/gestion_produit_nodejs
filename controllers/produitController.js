@@ -195,6 +195,7 @@ const generateNumProduit = async () => {
   };
 
   const getValueMinPrix = async () => {
+    let value = 0;
     try {
         const result = await produit.aggregate({
             _min: {
@@ -205,14 +206,16 @@ const generateNumProduit = async () => {
           if (!result._min.prix) {
             return 0;
           }
+          value = result._min.prix;
 
-        return result;
+        return value;
 
     } catch (error) {
         console.log(error);
     }
   };
   const getValueMaxPrix = async () => {
+    let value = 0;
     try {
         const result = await produit.aggregate({
             _max: {
@@ -223,9 +226,8 @@ const generateNumProduit = async () => {
           if (!result._max.prix) {
             return 0; 
           }
-      
-
-        return result;
+        value = result._max.prix;
+        return value;
 
     } catch (error) {
         console.log(error);

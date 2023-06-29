@@ -27,17 +27,17 @@ POST http://localhost:3001/api/produit
 Content-Type: application/json
 
 {
-    "design": "koba",
-    "quantite": 10,
-    "prix": 9000
+    "design": "hena",
+    "quantite": 12,
+    "prix": 10000
 }
 
 ###
-PUT http://localhost:3001/api/produit/1
+PUT http://localhost:3001/api/produit/5
 Content-Type: application/json
 
 {
-    "design": "koba",
+    "design": "tay",
     "quantite": 50,
     "prix": 3000
 }
